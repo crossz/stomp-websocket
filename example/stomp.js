@@ -473,7 +473,8 @@
         protocols = ['v10.stomp', 'v11.stomp'];
       }
       klass = Stomp.WebSocketClass || WebSocket;
-      ws = new klass(url, protocols);
+//    ws = new klass(url, protocols);
+	  ws = new klass(url);
       return new Client(ws);
     },
     over: function(ws) {
